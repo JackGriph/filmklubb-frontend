@@ -1,0 +1,14 @@
+.movie-list {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.movie-list-empty {
+  color: var(--color-muted);
+}
+
+@media (min-width: 768px) {
+  .movie-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,5 +1,5 @@
 import { useMovies } from './hooks/useMovies'
-import MovieCard from './components/MovieCard'
+import MovieList from './components/MovieList'
 import './App.css'
 
 function App() {
@@ -11,15 +11,7 @@ function App() {
 
       {error && <p role="alert">{error}</p>}
 
-      {loading ? (
-        <p>Laddar…</p>
-      ) : (
-        <div className="movie-list">
-          {movies.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
-          ))}
-        </div>
-      )}
+      {loading ? <p>Laddar…</p> : <MovieList movies={movies} />}
     </main>
   )
 }
