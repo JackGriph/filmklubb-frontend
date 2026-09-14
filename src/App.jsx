@@ -1,10 +1,12 @@
 import { useMovies } from './hooks/useMovies'
+import MovieCard from './components/MovieCard'
+import './App.css'
 
 function App() {
   const { movies, loading, error } = useMovies()
 
   return (
-    <main>
+    <main className="app">
       <h1>Filmklubb</h1>
 
       {error && <p role="alert">{error}</p>}
@@ -12,14 +14,11 @@ function App() {
       {loading ? (
         <p>Laddar…</p>
       ) : (
-        <ul>
+        <div className="movie-list">
           {movies.map((movie) => (
-            <li key={movie.id}>
-              {movie.title} ({movie.type}){' '}
-              {movie.watched ? `– sedd, betyg ${movie.rating}` : '– osedd'}
-            </li>
+            <MovieCard key={movie.id} movie={movie} />
           ))}
-        </ul>
+        </div>
       )}
     </main>
   )
