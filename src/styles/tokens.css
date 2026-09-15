@@ -1,10 +1,10 @@
 :root {
-  --color-bg: #3E2B1C;      /* kaffebrun */
-  --color-surface: #4B3621; /* korten, ett snäpp ljusare */
+  --color-bg: #3E2B1C;      
+  --color-surface: #4B3621; 
   --color-border: #6A4E33;
-  --color-text: #F5E6C4;    /* vaniljvit */
-  --color-muted: #D3BE97;   /* dämpad vanilj */
-  --color-accent: #C8102E;  /* äppelröd - används som yta, inte text */
+  --color-text: #F5E6C4;    
+  --color-muted: #D3BE97;   
+  --color-accent: #C8102E;  
 
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
