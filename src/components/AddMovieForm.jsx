@@ -23,6 +23,8 @@ function AddMovieForm({ onAdd}) {
             <input
             className="add-form-field"
             placeholder="Titel"
+            autoFocus
+            maxLength={200}
             value={title}
             onChange={(event) => setTitle(event.target.value)}
             />
@@ -40,6 +42,7 @@ function AddMovieForm({ onAdd}) {
             className="add-form-field"
             placeholder="Anteckning (valfritt)"
             rows={2}
+            maxLength={1000}
             value={notes}
             onChange={(event) => setNotes(event.target.value)}
             />
