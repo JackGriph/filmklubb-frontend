@@ -1,6 +1,7 @@
 .movie-list {
   display: grid;
   gap: var(--space-md);
+  grid-template-columns: 1fr 1fr;
 }
 
 .movie-list-empty {
@@ -9,6 +10,6 @@
 
 @media (min-width: 768px) {
   .movie-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3,1fr);
   }
 }
