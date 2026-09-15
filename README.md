@@ -1,16 +1,36 @@
-# React + Vite
+# Filmklubb – webbapp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Lista över filmer och serier att se. Markera som sedd, sätt betyg och ladda upp en bild.
 
-Currently, two official plugins are available:
+Backend: https://github.com/JackGriph/filmklubb-backend
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Krav
 
-## React Compiler
+- .NET 10 SDK
+- Node.js 20 eller senare
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 1. Starta backend
 
-## Expanding the ESLint configuration
+```bash
+git clone https://github.com/JackGriph/filmklubb-backend.git
+cd filmklubb-backend
+dotnet run
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+API:et kör på http://localhost:5071. Databasen skapas automatiskt vid start och fylls
+med några filmer, så listan är inte tom.
+
+## 2. Starta webbappen
+
+I ett nytt terminalfönster:
+
+```bash
+git clone https://github.com/JackGriph/filmklubb-frontend.git
+cd filmklubb-frontend
+npm install
+npm run dev
+```
+
+Öppna http://localhost:5173. Backend måste vara igång.
+
+
