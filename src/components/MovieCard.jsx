@@ -1,8 +1,9 @@
 import RatingStars from './RatingStars'
 import { BASE_URL } from '../api/client'
+import ImageUpload from './ImageUpload'
 import './MovieCard.css'
 
-function MovieCard({ movie, onUpdate }) {
+function MovieCard({ movie, onUpdate, onUpload }) {
   function update(changes) {
     onUpdate(movie.id, { ...movie, ...changes })
   }
@@ -29,6 +30,7 @@ function MovieCard({ movie, onUpdate }) {
         )}
 
         {movie.notes && <p className="card-notes">{movie.notes}</p>}
+        <ImageUpload movieId={movie.id} onUpload={onUpload} />
       </div>
        <button
         type="button"
