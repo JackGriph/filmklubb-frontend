@@ -4,7 +4,7 @@ import MovieList from './components/MovieList'
 import './App.css'
 
 function App() {
-  const { movies, loading, error, addMovie } = useMovies()
+  const { movies, loading, error, addMovie, saveMovie } = useMovies()
 
   return (
     <main className="app">
@@ -14,7 +14,7 @@ function App() {
 
       <AddMovieForm onAdd={addMovie}/>
 
-      {loading ? <p>Laddar…</p> : <MovieList movies={movies} />}
+    {loading ? <p>Laddar…</p> : <MovieList movies={movies} onUpdate={saveMovie} />}
     </main>
   )
 }

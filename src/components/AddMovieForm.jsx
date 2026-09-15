@@ -38,7 +38,7 @@ function AddMovieForm({ onAdd}) {
 
             <textarea
             className="add-form-field"
-            placeholder="Antekning (valfritt)"
+            placeholder="Anteckning (valfritt)"
             rows={2}
             value={notes}
             onChange={(event) => setNotes(event.target.value)}
