@@ -1,12 +1,22 @@
 .upload {
-    position: relative;
-    align-self: flex-start;
-    padding: 0.25rem 0.6rem;
+    position: absolute;
+    top: var(--space-sm);
+    left: var(--space-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
     border: 1px solid var(--color-muted);
-    border-radius: 6px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.55);
     color: var(--color-text);
-    font-size: 0.8125rem;
     cursor: pointer;
+}
+
+.upload svg {
+    width: 15px;
+    height: 15px;
 }
 
 .upload input {

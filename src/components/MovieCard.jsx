@@ -26,6 +26,12 @@ function MovieCard({ movie, onUpdate, onUpload }) {
         >
           ✓
         </button>
+
+        <ImageUpload
+          movieId={movie.id}
+          onUpload={onUpload}
+          label={movie.imageUrl ? 'Byt bild' : 'Välj bild'}
+        />
       </div>
 
       <div className="card-body">
@@ -39,8 +45,6 @@ function MovieCard({ movie, onUpdate, onUpload }) {
         )}
 
         {movie.notes && <p className="card-notes">{movie.notes}</p>}
-
-        <ImageUpload movieId={movie.id} onUpload={onUpload} />
       </div>
     </article>
   )
