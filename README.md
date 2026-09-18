@@ -9,6 +9,13 @@ Backend: https://github.com/JackGriph/filmklubb-backend
 - .NET 10 SDK
 - Node.js 20 eller senare
 
+Kontrollera att du har dem:
+
+```bash
+dotnet --version
+node --version
+```
+
 ## 1. Starta backend
 
 ```bash

@@ -88,3 +88,12 @@
 .card-notes {
   overflow-wrap: break-word;
 }
+
+@media (max-width: 767px) {
+  .card-notes {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
